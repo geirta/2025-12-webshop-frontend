@@ -68,7 +68,7 @@ const Persons = () => {
                                 </td>
 
                                 <td>
-                                    <button onClick={() => viewPerson(person.id)}>Muuda</button>
+                                    <button onClick={() => viewPerson(Number(person.id))}>Muuda</button>
                                 </td>
                             </tr>)
                     }
