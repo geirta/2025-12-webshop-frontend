@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 
-const backendUrl = import.meta.env.VITE_API_HOST;
 
 function AdminHome() {
 

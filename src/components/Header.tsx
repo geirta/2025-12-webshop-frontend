@@ -15,7 +15,6 @@ const Header = () => {
     const {isLoggedIn} = useContext(AuthContext);
     const count = useAppSelector(state => state.counter.value)
     const {handleLogout} = useContext(AuthContext);
-    const {handleLogin} = useContext(AuthContext);
     const {person} = useContext(AuthContext);
 
     function updateLanguage(newLang: string) {
