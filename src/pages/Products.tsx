@@ -6,6 +6,7 @@ import { increment } from '../store/counterSlice'
 import { useAppDispatch } from '../store/store';
 import { Link } from 'react-router-dom';
 
+const backendUrl = import.meta.env.VITE_API_HOST;
 
 const Products = () => {
 
@@ -19,7 +20,7 @@ const Products = () => {
     const [totalPages, setTotalPages] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:8099/products?page=${page}&size=${size}&sort=${sort}`)
+        fetch(`${backendUrl}/products?page=${page}&size=${size}&sort=${sort}`)
             .then(res => res.json())
             .then(json => {
                 setProducts(json.content);
